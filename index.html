@@ -89,6 +89,26 @@
     </style>
 </head>
 <body>
+<h2>YTP Text Trigger</h2>
+  
+  <button onclick="revealText()">CLICK TO REVEAL</button>
+
+  <div id="secret-ytp-text">
+    MAH BOI, THIS PEACE IS WHAT ALL TRUE WARRIORS STRIVE FOR!
+  </div>
+
+  <script>
+    function revealText() {
+      // 3. This changes the 'display' from 'none' to 'block'
+      var x = document.getElementById("secret-ytp-text");
+      
+      if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none"; // Optional: This lets you toggle it back and forth
+      }
+    }
+  </script>
     <section>
         <h2>Testimonial</h2>
         <div>
