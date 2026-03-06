@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YTP Glitch Generator</title>
     <style>
         section div {
             display: grid;
@@ -34,6 +34,57 @@
             display: none;
             justify-content: center;
             align-items: center;
+        }
+
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #video-container {
+            position: relative;
+            border: 5px solid #333;
+            transition: all 0.1s ease;
+        }
+
+        video {
+            width: 640px;
+            max-width: 90vw;
+            display: block;
+        }
+
+        /* YTP Style Distortions */
+        .glitch-invert { filter: invert(1) hue-rotate(180deg); }
+        .glitch-saturate { filter: saturate(10) contrast(2); }
+        .glitch-shake { transform: translate(10px, -10px) rotate(2deg); }
+        .glitch-zoom { transform: scale(1.5); }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            box-shadow: 5px 5px 0px #550000;
+        }
+
+        button:active {
+            box-shadow: 2px 2px 0px #550000;
+            transform: translateY(3px);
         }
     </style>
 </head>
